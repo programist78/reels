@@ -1,0 +1,38 @@
+.title{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 32px;
+color: white;
+height: 32px;
+width: 26ch;
+font-family: monospace;
+white-space: nowrap;
+flex-wrap: wrap;
+overflow: hidden;
+border-right: 4px solid rgb(255, 153, 0);
+animation-delay: 0s;
+animation: flashing_border 0.75s step-end 4s infinite, printed_text 4.5s steps(26);
+animation-delay: 0s;
+}
+@keyframes flashing_border {
+0%{
+    border-color: #ffa500;
+}
+25%{
+    border-color: transparent;
+}
+75%{
+    border-color: rgb(232, 151, 0);
+}
+100%{
+    border-color: transparent;
+}
+}
+
+@keyframes printed_text {
+0%{
+    width: 0;
+}
+}
