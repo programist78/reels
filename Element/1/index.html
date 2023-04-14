@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webXwiz</title>
+</head>
+<body>
+    <div class="marquee">
+        <ul class="marquee__content">
+            <div class="box" ><img src="./public/sass.svg" style="width: 150px; height: 150px;" alt="."/></div>
+            <div class="box" ><img src="./public/react.svg" style="width: 150px; height: 150px;" alt="."/></div>
+            <div class="box" ><img src="./public/next.svg" style="width: 150px; height: 150px;" alt="."/></div>
+        </ul>
+        <ul class="marquee__content" aria-hidden="true">
+            <div class="box" ><img src="./public/sass.svg" style="width: 150px; height: 150px;" alt="."/></div>
+            <div class="box" ><img src="./public/react.svg" style="width: 150px; height: 150px;" alt="."/></div>
+            <div class="box" ><img src="./public/next.svg" style="width: 150px; height: 150px;" alt="."/></div>
+      </div>
+    <style>  
+    body{
+        background-color: #010406;
+        display: flex;
+        justify-content: center;
+    }
+.box{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20%;
+    background-color: rgb(255, 255, 255);
+}
+
+.marquee {
+    --gap: 1rem;
+    display: flex;
+    width: 50%;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    gap: var(--gap);
+  }
+  
+  .marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 70%;
+    gap: 3.5rem;
+    animation: scroll 25s linear infinite;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+    </style>
+</body>
+</html>
