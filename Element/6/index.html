@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amazing 3D Flip Social Media Buttons</title>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <a href="#" class="container">
+      <div class="flipper">
+        <div class="button front">
+          <i class="fa fa-youtube"></i>
+        </div>
+        <div class="button back">
+          /webXwiz
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="container">
+      <div class="flipper">
+        <div class="button front">
+          <i class="fa fa-twitter"></i>
+        </div>
+        <div class="button back">
+          /webXwiz
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="container">
+      <div class="flipper">
+        <div class="button front">
+          <i class="fa fa-instagram"></i>
+        </div>
+        <div class="button back">
+          /web.x.wiz
+        </div>
+      </div>
+    </a>
+
+  </div>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #010406;
+}
+body .wrapper {
+  width: 80%;
+  text-align: center;
+}
+
+.container {
+  display: inline-block;
+  margin: 10px;
+  height: 50px;
+  width: 200px;
+  cursor: pointer;
+  perspective: 1000;
+  -webkit-perspective: 1000;
+}
+.container:nth-child(1) .front,
+.container:nth-child(1) .back {
+  background: linear-gradient(45deg, #c4302b, #ff231b);
+}
+.container:nth-child(2) .front,
+.container:nth-child(2) .back {
+  background: linear-gradient(45deg, #2183bf, #2faffe);
+}
+.container:nth-child(3) .front,
+.container:nth-child(3) .back {
+  background: linear-gradient(45deg, #b12169, #ff2f97);
+}
+.container:hover .flipper {
+  transform: rotateX(-90deg);
+}
+.container .flipper {
+  transition: all .5s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  transform-origin: 100% 25px;
+}
+.container .button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 180px;
+  padding: 0 10px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.container .button .fa {
+  font-size: 24px;
+}
+.container .button.front {
+  transform: translateZ(22px);
+}
+.container .button.back {
+  text-shadow: 1px 0 2px #000;
+  transform: rotateX(90deg) translateZ(22px);
+}
+  </style>
+</body>
+</html>
